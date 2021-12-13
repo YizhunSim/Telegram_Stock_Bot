@@ -15,10 +15,10 @@ app.get("/", (req, res) => {
     res.send("<h1>Hello from Node, from inside a docker container...</h1>");
   });
 
-  app.listen(3000, () => {
-    console.log("App running on port 3000...");
+  app.listen(8080, () => {
+    console.log("App running on port 8080...");
   });
-  
+
 console.log(`Telegram API Key: ${process.env.TELEGRAM_API_KEY}`)
 console.log(`AlphaVantage API Key: ${process.env.ALPHAVANTAGE_API_KEY}`);
 // Change the 'insert bot API token here' with your Telegram Bot API Token that you received when you created new bot in @BotSupport
