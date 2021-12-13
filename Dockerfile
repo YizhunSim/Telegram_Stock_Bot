@@ -15,7 +15,7 @@ RUN npm install
 # Note: files & folders inside .dockerignore will not be copied.
 COPY . .
 
-# The app binds to port 3000, so exposing port 3000 to be used by the docker network
+# The app binds to port 8080, so exposing port 8080 to be used by the docker network
 EXPOSE 8080
 
 # Runtime command to be executed when the container is launched
