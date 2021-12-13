@@ -1,7 +1,7 @@
 "use strict";
 // const { Telegraf } = require("telegraf");
 import { Telegraf } from 'telegraf';
-console.log(Telegraf);
+
 // const fetch = require("node-fetch");
 import fetch from 'node-fetch';
 
