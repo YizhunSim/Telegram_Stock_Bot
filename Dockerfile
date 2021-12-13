@@ -16,7 +16,7 @@ RUN npm install
 COPY . .
 
 # The app binds to port 3000, so exposing port 3000 to be used by the docker network
-EXPOSE 3000
+EXPOSE 8080
 
 # Runtime command to be executed when the container is launched
 CMD ["node", "app.js"]
