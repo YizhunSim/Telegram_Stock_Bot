@@ -24,4 +24,4 @@ jobs:
         docker build -t telegramstockbot .
     - name: Docker push
       run: |
-        docker push yizhunsim/nodejs:1.0.0
+        docker push telegramstockbot
