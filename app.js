@@ -29,7 +29,7 @@ bot.command("start", (ctx) => {
    console.log(ctx.from);
    bot.telegram.sendMessage(
    ctx.chat.id,
-   "Hello from your own StockPrice bot. Please input your desired ticker symbol, for example .GOOG or .AAPL."
+   "Hello to your own Telegram StockPrice bot. Please input your desired ticker symbol, for example .GOOG or .AAPL."
    );
 });
 bot.hears(/([.])\w{0,4}/, async (ctx) => {
