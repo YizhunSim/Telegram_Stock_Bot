@@ -1,4 +1,4 @@
-name: cloudrun-deploy
+name: Docker Build
 
 on:
   push:
@@ -11,31 +11,17 @@ jobs:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
     steps:
-    
     - name: Checkout
       uses: actions/checkout@master
-
-    # Setup gcloud CLI
-    - uses: google-github-actions/setup-gcloud@master
-      with:
-        service_account_email: ${{ secrets.GCP_EMAIL }}
-        service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-        export_default_credentials: true
-
-    # Configure Docker with Credentials
-    - name: Configure Docker
+    - name: docker login
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
-        gcloud auth configure-docker
-    # Build the Docker image
-    - name: Build & Publish
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: docker build nodejs
       run: |
-        gcloud config set project ${{ secrets.GCP_PROJECT }}
-        gcloud builds submit --tag gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }}
-        gcloud config set run/region us-central1
-    # Deploy the Docker image to the GKE cluster
-    - name: Deploy
+        docker build -t telegramstockbot .
+    - name: docker push
       run: |
-        gcloud run deploy ${{ secrets.GCP_APPLICATION }} --image gcr.io/${{ secrets.GCP_PROJECT }}/${{ secrets.GCP_APPLICATION }} \
-        --platform managed \
-        --allow-unauthenticated \
-        --memory 256M
+        docker push yizhunsim/nodejs:1.0.0
