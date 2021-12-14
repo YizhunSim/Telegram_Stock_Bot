@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegram-stock-bot
+  labels:
+    app: telegram-stock-bot
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: telegram-stock-bot
+  template:
+    metadata:
+      labels:
+        app: telegram-stock-bot
+    spec:
+      containers:
+        - name: telegram-stock-bot
+          image: gcr.io/devopsfintech2021/IMAGE:$GITHUB_SHA
+          ports:
+            - containerPort: 8080
