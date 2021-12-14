@@ -23,6 +23,7 @@ env:
   GKE_ZONE: asia-southeast1   # TODO: update to cluster zone
   DEPLOYMENT_NAME: telegram-stock-bot # TODO: update to deployment name
   IMAGE: telegram-stock-bot
+  GITHUB_SHA: ${{ github.sha }}
 
 jobs:
   setup-build-publish-deploy:
