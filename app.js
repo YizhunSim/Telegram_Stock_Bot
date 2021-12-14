@@ -19,8 +19,7 @@ app.get("/", (req, res) => {
     console.log("App running on port 8080...");
   });
 
-console.log(`Telegram API Key: ${process.env.TELEGRAM_API_KEY}`)
-console.log(`AlphaVantage API Key: ${process.env.ALPHAVANTAGE_API_KEY}`);
+
 // Change the 'insert bot API token here' with your Telegram Bot API Token that you received when you created new bot in @BotSupport
 const bot = new Telegraf(process.env.TELEGRAM_API_KEY);
 // Change the 'demo' value below with AlphaVantage API Token received when you requested the free API access in AlphaVantage

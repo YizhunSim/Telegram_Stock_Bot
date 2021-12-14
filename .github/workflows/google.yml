@@ -24,6 +24,8 @@ env:
   DEPLOYMENT_NAME: telegram-stock-bot # TODO: update to deployment name
   IMAGE: telegram-stock-bot
   GITHUB_SHA: ${{ github.sha }}
+  TELEGRAM_API_KEY: ${{ secrets.TELEGRAM_API_KEY }}
+  ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
 
 jobs:
   setup-build-publish-deploy:
@@ -80,6 +82,8 @@ jobs:
         sed -i -e 's/IMAGE/'"$IMAGE"'/' deployment.yaml
         sed -i -e 's/GITHUB_SHA/'"$GITHUB_SHA"'/' deployment.yaml
         sed -i -e 's/PROJECT_ID/'"$PROJECT_ID"'/' deployment.yaml
+        sed -i -e 's/TELEGRAM_API_KEY_VALUE/'"$TELEGRAM_API_KEY"'/' deployment.yaml
+        sed -i -e 's/ALPHAVANTAGE_API_KEY_VALUE/'"$ALPHAVANTAGE_API_KEY"'/' deployment.yaml
         ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         ./kustomize build . | kubectl apply -f -
         kubectl rollout status deployment/$DEPLOYMENT_NAME

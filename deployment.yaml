@@ -19,3 +19,8 @@ spec:
           image: gcr.io/PROJECT_ID/IMAGE:GITHUB_SHA
           ports:
             - containerPort: 8080
+          env:
+        - name: TELEGRAM_API_KEY
+          value: TELEGRAM_API_KEY_VALUE
+        - name: ALPHAVANTAGE_API_KEY
+          value: ALPHAVANTAGE_API_KEY_VALUE
