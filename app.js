@@ -19,6 +19,10 @@ app.get("/", (req, res) => {
     console.log("App running on port 8080...");
   });
 
+console.log(`Logging Kubernetes configMap: ${process.env.log}`);
+console.log(`Logging Kubernetes configMap: ${process.env.something}`);
+console.log(`Logging Kubernetes Secrets: ${process.env.TELEGRAM_API_KEY}`);
+console.log(`Logging Kubernetes Secrets: ${process.env.ALPHAVANTAGE_API_KEY}`);
 
 // Change the 'insert bot API token here' with your Telegram Bot API Token that you received when you created new bot in @BotSupport
 const bot = new Telegraf(process.env.TELEGRAM_API_KEY);

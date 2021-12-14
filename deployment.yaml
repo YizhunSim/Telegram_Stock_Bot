@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: telegram-stock-bot
+  name: telegram-stock-bot-node-deployment
   labels:
     app: telegram-stock-bot
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: telegram-stock-bot
@@ -15,12 +15,12 @@ spec:
         app: telegram-stock-bot
     spec:
       containers:
-        - name: telegram-stock-bot
+        - name: telegram-stock-bot-node
           image: gcr.io/PROJECT_ID/IMAGE:GITHUB_SHA
           ports:
             - containerPort: 8080
-          env:
-        - name: TELEGRAM_API_KEY
-          value: TELEGRAM_API_KEY_VALUE
-        - name: ALPHAVANTAGE_API_KEY
-          value: ALPHAVANTAGE_API_KEY_VALUE
+          envFrom:
+            - configMapRef:
+                name: defaultconfig
+            - secretRef:
+                name: telegram-alphavantage-secret
