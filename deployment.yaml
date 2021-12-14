@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: telegram-stock-bot
-          image: gcr.io/devopsfintech2021/IMAGE:GITHUB_SHA
+          image: gcr.io/PROJECT_ID/IMAGE:GITHUB_SHA
           ports:
             - containerPort: 8080
