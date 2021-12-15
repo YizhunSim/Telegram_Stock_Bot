@@ -201,3 +201,7 @@ Verify that GitHub actions workflow is running
 * [A simple Docker(React/Express) App to practice CI/CD)](https://github.com/SparkDevTeams/ds2020_mauricio)
 * [Configmaps and Secrets of Kubernetes (k8s) with a NodeJs application: Hands on with JotaonCode](https://www.youtube.com/watch?v=0Zvmobgi308)
 * [Kubernetes Secrets](https://kubernetes.io/docs/concepts/configuration/secret/?ref=hackernoon.com)
+* [Kubernetes Architecture explained | Kubernetes Tutorial 15](https://www.youtube.com/watch?v=umXEmn3cMWY)
+* [Alpha Vantage API Documentation](https://www.alphavantage.co/documentation/)
+* [How to base64 encode a string in terminal](https://dev.to/scrabill/how-to-base64-encode-a-string-in-terminal-327b)
+* [https://github.com/SparkDevTeams/ds2020_mauricio](https://github.com/SparkDevTeams/ds2020_mauricio)
