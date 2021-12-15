@@ -38,16 +38,7 @@ bot.command("start", (ctx) => {
 bot.hears(/([.])\w{0,4}/, async (ctx) => {
 let final_uri = url + `&symbol=${ctx.message.text.substring(1)}`;
 console.log(`Final Url: ${final_uri}`);
-console.log(`ctx.message.date: ${ctx.message.date}`);
-console.log(`ctx message data after * 1000: ${ctx.message.date * 1000}`);
-// let today = new Date(ctx.message.date * 1000);
-// let formattedDate =
-//     today.getFullYear() + "-" +
-//     (today.getMonth() + 1) + "-" +
-//     // You can change the today.getDate() with subtraction by 1, addition by 1, or not at all
-//     // based on what is your timezone. Currently the default timezone is Eastern Time of US
-//     (today.getDate() - 1);
-//console.log(`formatted data: ${formattedDate}`);
+
 fetch(final_uri)
     .then((response) => response.json())
     .then((data) => {
