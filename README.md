@@ -87,7 +87,7 @@ Code can be found here:
 `docker run -d --name telegrambot --env
 TELEGRAM_API_KEY=[TELEGRAM_API_VALUE] --env ALPHAVANTAGE_API_KEY=[ALPHAVANTAGE_API_KEY] -p 8080:8080 telegrambot`
 
-arguments --env is included in the command because in the nodejs application. It is expected environment variables to be passed into the application. Since the .env file is not exposed in the public repository github. We are pass these arguments only during the run process to verify that the Docker Image of our application is working.
+arguments --env is included in the command because in the nodejs application, it is expecting environment variables to be passed into the application. Since the .env file is not exposed in the public repository github. We will have to pass the arguments during the run process to verify that the Docker Image of our application can be run successfully.
 
 *	Verify that Docker Image process is running
 
