@@ -200,6 +200,7 @@ Verify that GitHub actions workflow is running
 ## Screenshots
 
 DockerHub
+[DockerHub Link](https://hub.docker.com/repository/docker/yizhunsim/telegramapp)
 ![](resources/DockerHub.png)
 
 Google Container Registry
