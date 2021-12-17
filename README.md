@@ -198,13 +198,13 @@ Verify that GitHub actions workflow is running
 
 
 ## Screenshots
-![](resources/Google Container Registry.png)
+![](resources/GoogleContainerRegistry.png)
 
-![](resources/Google Kubernetes Engine - Cluster.png)
+![](resources/GoogleKubernetesEngine-Cluster.png)
 
-![](resources/Google Kubernetes Workload.png)
+![](resources/GoogleKubernetesWorkload.png)
 
-![](resources/Google Kubernetes Dashboard.png)
+![](resources/GoogleKubernetesDashboard.png)
 
 
 ## Useful References
