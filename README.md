@@ -196,6 +196,14 @@ Verify that GitHub actions workflow is running
 	* Verify that your kubernetes pods status is Running. 
 	* Verify in 'Exposing services' you are able to view the webpage hosting with Google Kubernetes Engine
 
+
+## Screenshots
+![](resources/Google Container Registry.png)
+![](resources/Google Kubernetes Engine - Cluster.png)
+![](resources/Google Kubernetes Workload.png)
+![](resources/Google Kubernetes Dashboard.png)
+
+
 ## Useful References
 
 * [Deploy MEARN App to GKE with Github Actions](https://www.youtube.com/watch?v=SU1S6L0U3AE)
