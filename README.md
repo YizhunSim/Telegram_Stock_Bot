@@ -215,6 +215,9 @@ Google Kubernetes Workload
 Google Kubernetes Dashboard
 ![](resources/GoogleKubernetesDashboard.png)
 
+Google Kubernetes Cluster Endpoint
+![](resources/GoogleKubernetesClusterEndpoint.png)
+
 
 ## Useful References
 
